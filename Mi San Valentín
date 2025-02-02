@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quieres ser mi San Valentín?</title>
+    <style>
+        body {
+            background-image: url('https://i.imgur.com/7t0uM8D.jpg'); /* Imagen de flor morada */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 50px;
+            color: white;
+            backdrop-filter: brightness(0.85);
+        }
+
+        h1 {
+            color: #ffffff;
+            font-size: 3em;
+            text-shadow: 2px 2px 5px #800080;
+        }
+
+        p {
+            font-size: 1.5em;
+            color: #f3e5f5;
+            background: rgba(128, 0, 128, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 600px;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            margin: 20px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .yes-btn {
+            background-color: #9b59b6;
+            color: white;
+        }
+
+        .no-btn {
+            background-color: #cccccc;
+            color: black;
+            position: absolute;
+        }
+
+        .yes-btn:hover {
+            background-color: #8e44ad;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>¿Quieres ser mi San Valentín?</h1>
+
+    <p>Las flores moradas representan el encanto, la admiración y el amor profundo. Así como su belleza destaca entre todas, tú iluminas mi vida de la forma más especial.</p>
+
+    <p>"Agradezco a Dios por haberte puesto en mi camino. No cabe duda que eres lo más hermoso que me ha pasado en la vida y mi amor por ti solo aumenta, espero que tu amor nunca cambie o disminuya.  
+    <strong>Te amo infinitamente.</strong>"</p>
+
+    <button class="btn yes-btn" onclick="respuestaSi()">¡Sí!</button>
+    <button class="btn no-btn" id="noBtn" onmouseover="moverBoton()">No</button>
+
+    <script>
+        function respuestaSi() {
+            alert("¡Sabía que dirías que sí! Eres mi felicidad diaria. ❤️");
+        }
+
+        function moverBoton() {
+            const noBtn = document.getElementById('noBtn');
+            const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
+            const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
+            noBtn.style.left = `${x}px`;
+            noBtn.style.top = `${y}px`;
+        }
+    </script>
+
+</body>
+</html>
